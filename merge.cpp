@@ -1,11 +1,25 @@
+#include <array>
 #include <iostream>
 #include <algorithm>
+#include <iterator>
+#include <vector>
 int main(){
 std::array <int,6> arr ={2,3,6,5,48,9};
 std::array <int,4> arr1 ={1,6,7,6};
 std::array <int,10> arr3;
 std::merge(arr.begin(),arr.end(),arr1.begin(),arr1.end(),arr3.begin());
-for( auto i :arr3){
+std::vector<int> v{1,23};
+std::vector<int> v2{10,15};
+std::vector<int> v3(v.size()+v2.size());
+v.resize(v.size()+v2.size());
+std::merge(v.begin(),v.end(),v2.begin(),v2.end(),v3.begin());
+std::sort(std::begin(v3),std::end(v3));
+std::cout<<std::endl;
+std::cout<<std::endl;
+return 0;
+
+
+for( auto i :v3){
     std::cout<<i<<" ";
 }
 }

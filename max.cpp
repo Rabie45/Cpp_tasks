@@ -14,7 +14,7 @@ auto search=std::find(arr.begin(),arr.end(),val);
 
 std::cout<<(search -arr.data())<<std::endl;
 
-std::merge
+
 auto remove=std::remove(arr.begin(),arr.end(),6);
 for(auto i:arr){
 std::cout<<i<<" ";
